@@ -20,7 +20,7 @@ $(document).ready(function() {
             playerDiv.append(ratingHolder);
             var gifURL = response.url;
             playerDiv.append(gifURL);
-            playerBin.prepend(playerDiv);
+            buttonBin.prepend(playerDiv);
         });
     };
 
