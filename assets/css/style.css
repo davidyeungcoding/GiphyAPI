@@ -2,6 +2,15 @@
     float: right;
 }
 
-#gifs {
-    float: left;
+#searchLabel {
+    font-size: 2em;
+    margin-bottom: .5em;
+}
+
+#addPlayer {
+    margin: 1em .25em;
+}
+
+.playerBtn {
+    margin: 0em .25em .5em;
 }
