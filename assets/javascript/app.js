@@ -20,12 +20,11 @@ $(document).ready(function() {
                 var playerDiv = $('<div class="player">');
                 var titleHolder = $('<p class=info>').text('Title: ' + results[i].title);
                 var ratingHolder = $('<p class=info>').text('Rating: ' + results[i].rating);
-                var playerGif = $('<img>');
+                var playerGif = $('<img class="gifItem">');
                 playerGif.attr('src', results[i].images.fixed_height_still.url);
                 playerGif.attr('data-still', results[i].images.fixed_height_still.url);
                 playerGif.attr('data-animate', results[i].images.fixed_height.url);
                 playerGif.attr('data-state', 'still')
-                // playerGif.addClass('test')
                 playerDiv.append(playerGif);
                 playerDiv.append(titleHolder);
                 playerDiv.append(ratingHolder);
@@ -52,24 +51,19 @@ $(document).ready(function() {
         populateButtons();
     });
     
-    $('#gifs').click(function() {
+    $(document).on('click', '.gifItem', function() {
         var state = $(this).attr('data-state');
         if (state == 'still') {
             $(this).attr('src', $(this).attr('data-animate'));
-            // $(this).attr('src', $(this).results[i].images.fixed_height.url);
             $(this).attr('data-state', 'animate');
-            console.log('still check');
         }
         else if (state == 'animate') {
             $(this).attr('src', $(this).attr('data-still'));
-            // $(this).attr('src', $(this).results[i].images.fixed_height_still.url);
             $(this).attr('data-state', 'still');
-            console.log('animate check');
         }
-        console.log('overall click check');
-    })
-
+    });
+    
     $(document).on('click', '.playerBtn', playerGifs);
-
+    
     populateButtons();
 });
