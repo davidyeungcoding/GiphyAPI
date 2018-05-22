@@ -18,30 +18,30 @@ $(document).ready(function() {
 
             for (i = 0; i < results.length; i++) {
                 var playerDiv = $('<div class="player">');
-                var ratingHolder = $('<p>').text('Rating: ' + results[i].rating);
+                var titleHolder = $('<p class=info>').text('Title: ' + results[i].title);
+                var ratingHolder = $('<p class=info>').text('Rating: ' + results[i].rating);
                 var playerGif = $('<img>');
                 playerGif.attr('src', results[i].images.fixed_height_still.url);
                 playerGif.attr('data-still', results[i].images.fixed_height_still.url);
                 playerGif.attr('data-animate', results[i].images.fixed_height.url);
                 playerGif.attr('data-state', 'still')
                 // playerGif.addClass('test')
-                playerDiv.append(ratingHolder);
                 playerDiv.append(playerGif);
-                $('#gifs').append(playerDiv);
+                playerDiv.append(titleHolder);
+                playerDiv.append(ratingHolder);
+                $('#gifs').prepend(playerDiv);
             };
-
         });
     };
     
     function populateButtons() {
-        $('#gifs').empty();
+        $('#buttonBin').empty();
         for (i = 0; i < topic.length; i++) {
-            var btn = $('<button>');
+            var btn = $('<button class=btn btn-secondary>');
             btn.addClass('playerBtn');
             btn.attr('dataPlayer', topic[i]);
             btn.text(topic[i]);
-            $('#gifs').append(btn);
-            $('#playerSearch').attr('vlaue', '');
+            $('#buttonBin').append(btn);
         };
     };
     

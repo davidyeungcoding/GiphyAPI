@@ -2,6 +2,16 @@
     float: right;
 }
 
+#searchLabel,
+#playerSearch,
+#addPlayer {
+    font-family: 'Playfair Display', serif;
+}
+
+.player {
+    font-family: 'Pathway Gothic One', sans-serif;
+}
+
 #searchLabel {
     font-size: 2em;
     margin-bottom: .5em;
@@ -9,8 +19,31 @@
 
 #addPlayer {
     margin: 1em .25em;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 .playerBtn {
-    margin: 0em .25em .5em;
+    margin: 0em .4em .5em;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+img {
+    margin: .75em 0em;
+    width: 100%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.info {
+    text-align: center;
+    font-size: 1.25em;
+    padding: .35em 0em;
+    background-color: #B4C0CB;
+}
+
+.jumbotron {
+    background-image: url('../images/dmitri-popov-173676-unsplash.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 200%;
+    background-position: top center;
 }
